@@ -1,0 +1,27 @@
+---
+- name: Deploy movie api
+  hosts: appservers
+  tasks:
+    - name: Prepare File System 
+      file:
+        path: /opt/install
+        owner: installer
+        group: installer
+        state: directory
+        mode: 0700
+    - name: Prepare File System conf
+      file:
+        path: /opt/install/conf
+        state: directory
+        owner: installer
+        group: installer
+        mode: 0700
+    - name: Prepare File System logs
+      file:
+        path: /opt/install/logs
+        state: directory
+        owner: installer
+        group: installer
+        mode: 0700
+  become: yes
+  become_method: sudo

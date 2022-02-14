@@ -1,0 +1,10 @@
+---
+- name: Undeploy movie api
+  hosts: appservers
+  tasks:
+    - name: Remove Directories
+      file:
+        path: /opt/install
+        state: absent
+  become: yes
+  become_method: sudo
