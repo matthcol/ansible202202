@@ -1,0 +1,9 @@
+---
+- name: create FS
+  file:
+    path: "{{ install_dir }}"
+    state: directory
+    mode: "{{ mode }}"
+    owner: "{{ owner }}"
+    group: "{{ group }}"
+

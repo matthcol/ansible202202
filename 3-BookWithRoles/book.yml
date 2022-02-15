@@ -1,0 +1,14 @@
+---
+- hosts: appservers
+  become: yes
+  become_method: sudo
+  roles:
+    - common
+    - install_api
+
+- hosts: dbservers
+  become: yes
+  become_method: sudo
+  roles:
+    - common
+    - install_db

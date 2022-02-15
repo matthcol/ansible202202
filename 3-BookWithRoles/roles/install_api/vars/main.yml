@@ -1,0 +1,5 @@
+---
+install_dir: /opt/install
+owner: installer
+group: installer
+mode: 0755
